@@ -40,11 +40,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(SolutionDir)/../../LibBombermanGDL/LibBomberman/Debug/;$(SolutionDir)/../../LibBombermanGDL/LibBomberman/Vendors/OpenGL/lib/</LibraryPath>
-    <IncludePath>$(SolutionDir)/../../LibBombermanGDL/LibBomberman/Vendors;$(SolutionDir)/../../LibBombermanGDL/LibBomberman/Vendors/OpenGL/include;$(SolutionDir)/../../LibBombermanGDL/LibBomberman/LibBomberman/;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Program Files\Autodesk\FBX\FBX SDK\2014.2.1\include;$(SolutionDir)/../../LibBombermanGDL/LibBomberman/Vendors;$(SolutionDir)/../../LibBombermanGDL/LibBomberman/Vendors/OpenGL/include;$(SolutionDir)/../../LibBombermanGDL/LibBomberman/LibBomberman/;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(SolutionDir)/../../LibBombermanGDL/LibBomberman/Debug/;$(SolutionDir)/../../LibBombermanGDL/LibBomberman/Vendors/OpenGL/lib/</LibraryPath>
-    <IncludePath>$(SolutionDir)/../../LibBombermanGDL/LibBomberman/Vendors;$(SolutionDir)/../../LibBombermanGDL/LibBomberman/Vendors/OpenGL/include;$(SolutionDir)/../../LibBombermanGDL/LibBomberman/LibBomberman/;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Program Files\Autodesk\FBX\FBX SDK\2014.2.1\include;$(SolutionDir)/../../LibBombermanGDL/LibBomberman/Vendors;$(SolutionDir)/../../LibBombermanGDL/LibBomberman/Vendors/OpenGL/include;$(SolutionDir)/../../LibBombermanGDL/LibBomberman/LibBomberman/;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -85,6 +85,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameEngine.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\test.fragment" />
+    <None Include="Shaders\test.vertex" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
