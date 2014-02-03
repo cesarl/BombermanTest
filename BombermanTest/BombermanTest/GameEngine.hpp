@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Core/Game.hh>
+#include <Core/SdlContext.hh>
 
 class GameEngine : public Game
 {
@@ -13,6 +14,8 @@ public:
 
 	virtual bool initialize()
 	{
+		if (!_context.start(400, 400, "My beautifull window"))
+			return false;
 		return true;
 	}
 
@@ -24,4 +27,6 @@ public:
 	virtual void draw()
 	{
 	}
+private:
+	SdlContext _context;
 };
