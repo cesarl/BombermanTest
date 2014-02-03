@@ -2,6 +2,8 @@
 
 #include <Core/Game.hh>
 #include <Core/SdlContext.hh>
+#include <Core/Clock.hh>
+#include <Core/Input.hh>
 
 class GameEngine : public Game
 {
@@ -21,12 +23,17 @@ public:
 
 	virtual bool update()
 	{
+		_context.updateClock(_clock);
+		_context.updateInputs(_input);
 		return true;
 	}
 
 	virtual void draw()
 	{
+		_context.flush();
 	}
 private:
 	SdlContext _context;
+	Clock _clock;
+	Input _input;
 };
